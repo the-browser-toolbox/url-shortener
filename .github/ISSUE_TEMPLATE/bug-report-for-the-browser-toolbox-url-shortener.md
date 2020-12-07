@@ -54,4 +54,4 @@ Not obligatory, but suggest a fix/reason for the bug.
  - Browser [e.g. chrome, safari]
  - Version [e.g. 22]
 
-Please use the [Gitter](https://gitter.im/the-browser-toolbox/community) channel to update about bug report.
+Please use the [Gitter](https://gitter.im/the-browser-toolbox/community) channel to update your bug report.
