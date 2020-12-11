@@ -1,6 +1,10 @@
 const apiKey = 'YOUR_API_TOKEN' //go to https://developers.rebrandly.com/docs/get-started
+const apiUrl = 'https://api.rebrandly.com/v1/links'
+// Some page elements
+const Qrcodefield = document.getElementById('qrcode_pane')
+const shortenButton = document.getElementById('shorten')
+const responseField = document.getElementById('responseField')
 
-const url = 'https://api.rebrandly.com/v1/links'
 const displayShortUrl = (event) => {
     event.preventDefault()
     while (responseField.firstChild) {
@@ -8,19 +12,33 @@ const displayShortUrl = (event) => {
     }
     getCurrentTab()
 }
+const QRgen = (currentURL) => {
+    var qrcode = new QRCode({
+        content: currentURL,
+        container: 'svg-viewbox', //Responsive use
+        join: true, //Crisp rendering and 4-5x reduced file size
+    })
+    var svg = qrcode.svg()
+    Qrcodefield.innerHTML = svg
+}
 const getCurrentTab = () => {
     //get the currently active tab
+    let currentURL = ''
     if (chrome) {
         chrome.tabs.query({ active: true, lastFocusedWindow: true }, (arrayOfTabs) => {
-            // qrcode.clear() // clear the code.
-            shortenUrl(arrayOfTabs.length > 0 ? arrayOfTabs[0].url : 'googl.com')
+            currentURL = arrayOfTabs.length > 0 ? arrayOfTabs[0].url : 'ERROr in getting URL '
+            shortenUrl(currentURL)
+            QRgen(currentURL)
         })
     } else {
         browser.tabs.query({ active: true, currentWindow: true }).then((tab) => {
-            shortenUrl(logCurrentTabData === undefined ? 'err' : logCurrentTabData.url)
+            currentURL = logCurrentTabData === undefined ? 'ERROr in getting URL ' : logCurrentTabData.url
+            shortenUrl(currentURL)
+            QRgen(currentURL)
         })
     }
 }
+
 const renderResponse = (res) => {
     // Displays either message depending on results
     if (res.errors) {
@@ -29,23 +47,25 @@ const renderResponse = (res) => {
         responseField.innerHTML = `<p>Your shortened url is: </p><p> ${res.shortUrl} </p>`
     }
 }
-// Some page elements
-const inputField = document.querySelector('#input')
-const shortenButton = document.querySelector('#shorten')
-const responseField = document.querySelector('#responseField')
-const shortenUrl = (urlToShorten) => {
+
+const shortenUrl = async (urlToShorten) => {
     const data = JSON.stringify({ destination: urlToShorten })
-    const xhr = new XMLHttpRequest()
-    xhr.responseType = 'json'
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            renderResponse(xhr.response)
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Content-type': 'application/json',
+                apikey: apiKey,
+            },
+        })
+        if (response.ok) {
+            const jsonResponse = await response.json()
+            renderResponse(jsonResponse)
         }
+    } catch (error) {
+        console.log(error)
     }
-    xhr.open('POST', url)
-    xhr.setRequestHeader('Content-Type', 'application/json')
-    xhr.setRequestHeader('apikey', apiKey)
-    xhr.send(data)
 }
 
 shortenButton.addEventListener('click', displayShortUrl) //Start request

@@ -1,12 +1,12 @@
 body {
-    width: 600px;
-    height: 400px;
+    width: 400px;
+    height: 550px;
     font-family: 'Verdana', 'Arial', sans-serif;
     font-size: 16px;
     background-position: center;
 }
 
-div#filter_pane {
+.filter_pane {
     position: absolute;
     top: 0;
     left: 0;
@@ -16,36 +16,12 @@ div#filter_pane {
     opacity: 0.7;
 }
 
-div#contents {
+.contents {
     position: relative;
     height: 100%;
 }
 
-div#login_pane {
-    display: none;
-    width: 100%;
-    text-align: center;
-    padding-top: 100px;
-}
-
-div#login_link {
-    cursor: pointer;
-    text-decoration: underline;
-    position: relative;
-}
-
-div.login_desc {
-    font-size: 12px;
-    color: #222222;
-    position: relative;
-    margin-top: 5px;
-}
-
-div#history_pane {
-    display: block;
-}
-
-div.section_title {
+.section_title {
     width: 100%;
     border-top: 1px solid #36c;
     background-color: #e5ecf9;
@@ -54,15 +30,15 @@ div.section_title {
     height: auto;
 }
 
-div.section_title_label {
+.section_title_label {
     float: left;
 }
 
-div.section_title_icon {
+.section_title_icon {
     text-align: right;
 }
 
-div.section_title_icon img {
+.section_title_icon img {
     cursor: pointer;
 }
 
@@ -76,12 +52,12 @@ td {
     white-space: nowrap;
 }
 
-td div.long_url {
+td .long_url {
     overflow: hidden;
     width: 415px;
 }
 
-td div.short_url {
+td .short_url {
     width: 100px;
 }
 
@@ -98,20 +74,20 @@ td a:-webkit-any-link {
     cursor: auto;
 }
 
-td div.click_count {
+td .click_count {
     width: 40px;
     text-align: right;
     font-weight: bold;
     cursor: pointer;
 }
 
-div#history_table_progress {
+.history_table_progress {
     text-align: center;
     margin-top: 100px;
 }
 
-div#shortener_pane {
-    padding: 2px;
+.shortener_pane {
+    padding: 8px;
     height: 55px;
 }
 
@@ -154,85 +130,18 @@ input#input_short_url {
     background-color: transparent;
 }
 
-div.message_pane {
-    width: 100%;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    vertical-align: top;
-}
-
-div#message {
-    color: red;
-    font-size: 12px;
-    float: right;
-    margin-top: 5px;
-    margin-right: 5px;
-    text-align: right;
-}
-
-div#gplus {
-    float: right;
-    width: 19px;
-    height: 20px;
-    padding-top: 2px;
-    margin-right: 3px;
-    cursor: pointer;
-    display: none;
-}
-
-div#twitter {
-    float: right;
-    width: 19px;
-    height: 20px;
-    padding-top: 2px;
-    margin-right: 3px;
-    cursor: pointer;
-    display: none;
-}
-
-div#facebook {
-    float: right;
-    width: 19px;
-    height: 20px;
-    padding-top: 2px;
-    margin-right: 3px;
-    cursor: pointer;
-    display: none;
-}
-
-div#mail {
-    float: right;
-    width: 19px;
-    height: 20px;
-    padding-top: 4px;
-    margin-right: 3px;
-    display: none;
-}
-
-div#qrcode {
+.qrcode {
     float: right;
     width: 20px;
     margin-right: 3px;
     display: none;
 }
 
-div#qrcode img {
+.qrcode img {
     cursor: pointer;
 }
 
-div#read_it_later {
-    float: left;
-    margin-top: 3px;
-    margin-right: 3px;
-}
-
-div#read_it_later img {
-    cursor: pointer;
-    width: 16px;
-    height: 16px;
-}
-
-div#url_detail {
+.url_detail {
     float: right;
     font-size: 13px;
     display: none;
@@ -240,184 +149,18 @@ div#url_detail {
     margin-right: 5px;
 }
 
-div.paginator_pane {
-    font-size: 12px;
-    width: 100%;
-    text-align: right;
-    color: gray;
-}
-
-div#paginator a {
-    margin-left: 5px;
-}
-
-div.footer {
-    bottom: 0;
-    position: absolute;
-    font-size: 10px;
-    color: gray;
-    text-align: center;
-    width: 100%;
-}
-
-a#clear_timer {
-    position: absolute;
-    right: 0;
-}
-
-a#recommend {
-    position: absolute;
-    left: 0;
-}
-
-a#report {
-    position: absolute;
-    left: 0;
-}
-
-div#detail_pane {
+.qrcode_pane {
     position: absolute;
     border: 1px solid gray;
-    top: 90px;
-    left: 130px;
-    width: 295px;
-    height: 220px;
-    background-color: white;
-    display: none;
-}
-
-div#detail_pane img {
-    position: relative;
-    left: 130px;
-    top: 90px;
-}
-
-div#detail_url_info {
-    font-size: 12px;
-    overflow: hidden;
-}
-
-div.detail_date {
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-right: 5px;
-    padding-left: 3px;
-    border-bottom: 1px solid skyblue;
-}
-
-div.detail_section {
-    margin-left: 8px;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
-
-div.detail_section td {
-    font-size: 12px;
-}
-
-div.detail_section td.click_count {
-    text-align: right;
-}
-
-div#click_counts_pane {
-    position: absolute;
-    border: 1px solid gray;
-    top: 130px;
-    left: 400px;
-    width: 130px;
-    height: 115px;
-    background-color: white;
-    display: none;
-}
-
-div#click_counts_pane img {
-    position: relative;
-    left: 50px;
-    top: 40px;
-}
-
-div#click_counts_info {
-    font-size: 12px;
-    overflow: hidden;
-}
-
-div.click_counts_section {
-    margin-left: 8px;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
-
-div.click_counts_section td {
-    font-size: 12px;
-}
-
-div.click_counts_section td.click_count {
-    text-align: right;
-}
-
-div#qrcode_pane {
-    position: absolute;
-    border: 1px solid gray;
-    top: 76px;
+    top: 10px;
     left: 350px;
-    width: 150px;
-    height: 150px;
-    background-color: white;
-    display: none;
-}
-
-div#ad_pane {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    height: 60px;
-    text-align: center;
-    override: hidden;
-}
-
-div#ad_pane iframe {
-    width: 468px;
-    height: 100%;
-    border: 0px;
-}
-
-div#edit_title_base_pane {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 605px;
-    height: 460px;
-    z-index: 1;
-    background-color: white;
-    opacity: 0.5;
-    display: none;
-}
-
-div#edit_title_pane {
-    position: absolute;
-    border: 1px solid gray;
-    top: 100px;
-    left: 20px;
-    width: 450px;
-    background-color: white;
-    padding: 3px;
-    z-index: 2;
-    display: none;
-}
-
-div#edit_title_pane div {
-    width: 340px;
-    float: left;
-}
-
-div#edit_title_pane div input {
-    width: 100%;
-}
-
-div#edit_title_pane button {
     width: 100px;
-    float: right;
-    font-size: 10.5px;
+    height: 100px;
+    background-color: white;
+    display: none;
+    margin-bottom: 20px;
+    padding: 0;
+}
+.responseField {
+    margin-bottom: 8px;
 }

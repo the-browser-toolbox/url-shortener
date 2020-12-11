@@ -1,58 +1,35 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="styles/popup.css" />
-	</head>
-	<body>
-                <div id="filter_pane"></div>
 
-                <div id="contents">
-                
-                <div class="section_title">
-                  <div class="section_title_label">URL Shortener extension</div>
-                  <div class="section_title_icon">
-                    <img id="btn_option" src="../assets/images/option.png" />
-                  </div>
-                </div>
-                
-                <div id="shortener_pane">
-                  <button id="shorten" type="submit">
-                    Shorten
-                  </button>
-                  <img id="shorten_progress" src="../assets/progress.gif" />
-                  <input type="text" id="input_short_url" readonly value="http://rebrand.ly/..." />
-                  <div id="responseField"></div>
-                </div>
-                
-                
-                <div id="detail_pane">
-                  <img id="detail_pane_progress" src="../assets/progress.gif" />
-                  <div id="detail_url_info">
-                    <div class="detail_date">
-                      <span id="detail_date_str"></span>
-                    </div>
-                    <div class="detail_section">
-                      <table id="detail_section_table">
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                
-                
-                <div id="qrcode_pane">
-                </div>
-                
-                <div id="edit_title_base_pane">
-                </div>
-                <div id="edit_title_pane">
-                  <div>
-                    <input type="text" id="input_title" />
-                  </div>
-                  <button id="update_title">
-                    <span id="popupUpdateTitle"></span>
-                  </button>
-                </div>
-        <script src="scripts/popup.js"></script>
-	</body>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles/popup.css" />
+</head>
+
+<body>
+  <div id="filter_pane"></div>
+
+  <div id="contents">
+
+    <div class="section_title">
+      <div class="section_title_label">URL Shortener extension</div>
+      <div class="section_title_icon">
+        <img id="btn_option" src="../assets/images/option.png" />
+      </div>
+    </div>
+
+    <div id="shortener_pane">
+      <button id="shorten" type="submit">
+        Shorten
+      </button>
+      <img id="shorten_progress" src="../assets/progress.gif" />
+      <input type="text" id="input_short_url" readonly value="http://rebrand.ly/..." />
+      <div id="qrcode_pane">
+      </div>
+      <div id="responseField"></div>
+    </div>
+    <script src="../assets/lib/qrcode.min.js"></script>
+    <script src="scripts/popup.js"></script>
+</body>
+
 </html>
