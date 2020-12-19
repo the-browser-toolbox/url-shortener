@@ -8,7 +8,8 @@
 		"clipboardWrite",
 		"contextMenus",
 		"http://*/*",
-		"https://*/*"
+    "https://*/*",
+    "https://api.rebrandly.com/v1/links"
 	],
     "background": {
       "scripts": ["app/scripts/background.js"]
