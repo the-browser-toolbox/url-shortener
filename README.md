@@ -24,6 +24,51 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## Contributors
 
 <!-- readme: contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/adityabisoi">
+            <img src="https://avatars.githubusercontent.com/u/42573842?v=4" width="100;" alt="adityabisoi"/>
+            <br />
+            <sub><b>Aditya Bisoi</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/ak7550">
+            <img src="https://avatars.githubusercontent.com/u/54152266?v=4" width="100;" alt="ak7550"/>
+            <br />
+            <sub><b>Aniket Kumar Ghosh</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/has12zen">
+            <img src="https://avatars.githubusercontent.com/u/57583693?v=4" width="100;" alt="has12zen"/>
+            <br />
+            <sub><b>has12zen</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/siddiq-1018">
+            <img src="https://avatars.githubusercontent.com/u/70831310?v=4" width="100;" alt="siddiq-1018"/>
+            <br />
+            <sub><b>siddiq-1018</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/abhishekjnvk">
+            <img src="https://avatars.githubusercontent.com/u/16479428?v=4" width="100;" alt="abhishekjnvk"/>
+            <br />
+            <sub><b>Abhishek Kumar</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Aniket-508">
+            <img src="https://avatars.githubusercontent.com/u/71957423?v=4" width="100;" alt="Aniket-508"/>
+            <br />
+            <sub><b>Aniket Pawar</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: contributors -end -->
 
 ## Support
